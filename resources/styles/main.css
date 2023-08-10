@@ -613,6 +613,8 @@ body {
 
 /* === END SKILLS STYLES === */
 
+/* === START ACCORDION & LIBRARIES PROJECTS STYLES === */
+
 .projects-container {
   width: 90%;
   margin-left: auto;
@@ -620,19 +622,33 @@ body {
   margin-bottom: 120px;
 }
 
-.projects-container__des p {
+.projects-container__des p,
+.libs-container__des p {
   text-align: left;
   text-indent: 30px;
   font-size: 1.2rem;
   line-height: 2rem;
 }
 
-.projects-container__accordion details summary {
+.libs-container__des p {
+  margin-top: 50px;
+}
+
+.proj-summary,
+.libs-summary {
   font-weight: 700;
   padding-left: 25px;
   color: rgba(0, 0, 0, 0.75);
   margin-top: 50px;
-  padding-top: 15px;
+  padding: 5px 15px;
+  background-color: rgba(255, 69, 0, 0.8);
+  border-radius: 10px;
+}
+
+.proj-summary:hover,
+.libs-summary:hover {
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(255, 69, 0, 1);
 }
 
 .border-summary {
@@ -658,6 +674,66 @@ body {
   list-style-type: square;
   padding: 10px;
 }
+
+.libs-list {
+  width: 90%;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+}
+
+.card-lib {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffcc66;
+  border-radius: 5px;
+}
+
+.card-lib__icon {
+  width: 80%;
+  height: 80%;
+  padding: 10px;
+}
+
+.card-lib__icon--one {
+  content: url(/resources/images/greenshok.png);
+}
+.card-lib__icon--two {
+  content: url(/resources/images/chartjs.png);
+}
+.card-lib__icon--three {
+  content: url(/resources/images/datatables.png);
+}
+.card-lib__icon--four {
+  content: url(/resources/images/fullcalendar.png);
+}
+.card-lib__icon--five {
+  content: url(/resources/images/sheetjs.png);
+}
+.card-lib__icon--six {
+  content: url(/resources/images/tesseractjs.png);
+}
+
+.card-lib__name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* === END ACCORDION & LIBRARIES PROJECTS STYLES === */
 
 /* === START EDUCATION STYLES === */
 
@@ -1052,6 +1128,13 @@ nav.sticky {
 
   .stack-card {
     max-width: 550px;
+  }
+
+  .libs-list {
+    width: 60%;
+    height: 350px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 
   .services-container {
