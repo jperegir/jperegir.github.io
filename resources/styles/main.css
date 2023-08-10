@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --white: #eee;
+  --black: #141414;
+  --color: navy;
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Ubuntu", "Roboto", sans-serif;
@@ -309,7 +316,9 @@ body {
 }
 
 /* Ocultamos controles del mapa leaflet*/
-.leaflet-container { z-index: 0 !important; }
+.leaflet-container {
+  z-index: 0 !important;
+}
 
 .direction-container {
   width: 90%;
@@ -713,11 +722,10 @@ body {
   height: 250px;
   min-width: 320px;
   display: grid;
-  grid-template-areas: 
-  "header-image"
-  "header-title"
-  "body"
-  ;
+  grid-template-areas:
+    "header-image"
+    "header-title"
+    "body";
   grid-template-columns: 1fr;
   grid-template-rows: 20% 20% 60%;
   justify-content: center;
@@ -776,6 +784,52 @@ nav.sticky {
 
 /* === END STICKY MENU STYLES === */
 
+/* === START BUTTON ANIMATED MENU STYLES === */
+
+.btn-wrapper {
+  width: 300px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  border-top: 2px solid var(--black);
+  border-bottom: 2px solid var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.link {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: orangered;
+  text-decoration: none;
+  position: relative;
+  letter-spacing: 0.15rem;
+}
+
+.link span,
+.link i {
+  position: relative;
+}
+
+.link i {
+  margin-left: 0.5em;
+}
+
+.link .color {
+  width: 2em;
+  height: 2em;
+  border-radius: 2em;
+  background-color: var(--color);
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+  left: -0.65em;
+}
+
+/* === END BUTTON ANIMATED MENU STYLES === */
+
 /** END STICKY MENU EFFECT **/
 
 @media (min-width: 768px) {
@@ -829,6 +883,15 @@ nav.sticky {
     font-size: 4rem;
   }
 
+  .btn-wrapper {
+    width: 400px;
+    height: 80px;
+  }
+
+  .link {
+    font-size: 2rem;
+  }
+
   .slider {
     height: 300px;
   }
@@ -870,7 +933,7 @@ nav.sticky {
   .header-name__desc div:first-child {
     margin-top: 30px;
   }
-  
+
   .header-name__desc div p {
     padding-top: 20px;
     font-size: 3rem;

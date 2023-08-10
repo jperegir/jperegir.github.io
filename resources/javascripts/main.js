@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   window.addEventListener("scroll", function () {
-    // Experience timeline circles effect
+    /* EXPERIENCE TIMELINE CIRCLES EFFECT*/
     gsap.fromTo(
       ".circle-1",
       { y: 50, opacity: 0 },
@@ -89,6 +89,10 @@ document.addEventListener("DOMContentLoaded", () => {
       // Fin animación progress bar cuando dejan de aparecer en el viewPort
       hideProgress();
     }
+
+    /* MENU STICKY EFFECT */
+    const header = document.getElementById("nav");
+    header.classList.toggle("sticky", window.scrollY > 0);
   });
 
   /* SMOOTH SCROLL */
@@ -107,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   /* SMOOTH SCROLL */
   const pageHeaders = document.querySelectorAll(".header-text");
-  console.log('pageHeaders', pageHeaders);
+  console.log("pageHeaders", pageHeaders);
   pageHeaders.forEach((item) => {
     item.addEventListener("click", (e) => {
       e.preventDefault();
@@ -119,15 +123,6 @@ document.addEventListener("DOMContentLoaded", () => {
         behavior: "smooth",
       });
     });
-  });
-
-  // MENU STICKY EFFECT
-  window.addEventListener("scroll", function () {
-    // Menu Sticky effect
-    const header = document.getElementById("nav");
-    header.classList.toggle("sticky", window.scrollY > 0);
-
-  
   });
 
   function showProgress() {
@@ -145,4 +140,30 @@ document.addEventListener("DOMContentLoaded", () => {
       progressBar.style.width = 0;
     });
   }
+
+  const link = document.querySelector(".link");
+  const pink = document.querySelector(".color");
+  const hoverTL = gsap.timeline();
+  hoverTL.pause();
+
+  // from, to, fromTo Tweens
+  hoverTL.to(pink, {
+    width: "calc(100% + 1.3em)",
+    ease: "Elastic.easeOut(0.25)",
+    duration: 0.4,
+  });
+  hoverTL.to(pink, {
+    width: "2em",
+    left: "calc(100% - 1.45em)",
+    ease: "Elastic.easeOut(0.4)",
+    duration: 0.6,
+  });
+
+  link.addEventListener("mouseenter", () => {
+    hoverTL.play();
+  });
+
+  link.addEventListener("mouseleave", () => {
+    hoverTL.reverse();
+  });
 });
