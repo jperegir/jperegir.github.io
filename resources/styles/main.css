@@ -688,25 +688,30 @@ body {
 
 /* === START SERVICES STYLES === */
 .services-container {
-  width: 80vw;
-  min-width: 360px;
+  height: 850px;
+  width: 80%;
+  min-width: 320px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 100px;
   display: grid;
+  grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
   justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 20px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  gap: 25px;
+  align-items: start;
+  gap: 15px;
 }
 
 .service-card {
-  height: 380px;
-  min-width: 350px;
+  height: 250px;
+  min-width: 320px;
   display: grid;
+  grid-template-areas: 
+  "header-image"
+  "header-title"
+  "body"
+  ;
+  grid-template-columns: 1fr;
   grid-template-rows: 20% 20% 60%;
   justify-content: center;
   align-items: center;
@@ -717,19 +722,14 @@ body {
 }
 
 .service-card__icon {
+  grid-area: header-image;
   font-size: 4rem;
   text-align: center;
   padding-top: 15px;
 }
 
-.service-card__icon::after {
-  content: "";
-  display: block;
-  width: 50%;
-  border-bottom: 2px solid orangered;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 15px;
+.service-card__title {
+  grid-area: header-title;
 }
 
 .service-card__title h3 {
@@ -737,9 +737,23 @@ body {
   font-size: 1.5rem;
 }
 
+.service-card__desc {
+  grid-area: body;
+}
+
 .service-card__desc p {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.service-card__desc::before {
+  content: "";
+  display: block;
+  width: 50%;
+  border-bottom: 2px solid orangered;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
 }
 
 /* === END SERVICES STYLES === */
@@ -926,22 +940,31 @@ nav.sticky {
   }
 
   .services-container {
-    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    height: 450px;
     grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     margin-top: 100px;
   }
 
   .service-card {
-    height: 480px;
-    min-width: 300px;
+    height: 300px;
+    width: 250;
+    min-width: 250px;
+    gap: 20px;
   }
 
   .service-card__title h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+  }
+
+  .service-card__desc {
+    height: 200px;
   }
 
   .service-card__desc p {
-    font-size: 1.8rem;
+    font-size: 1.25rem;
+    padding: 15px;
   }
 }
 
