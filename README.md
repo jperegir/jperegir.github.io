@@ -1,10 +1,6 @@
-## RESPONSIVE-WEB-MENU
+## CURRICULUM VITAE
 ___
 
 ## Descripción
 
-**RESPONSIVE-WEB-MENU** es un proyecto web básico en el que se implementa un menú responsivo diseñado bajo el enfoque *"Mobile First"*.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+Currículo de José Vicente Pérez Girona.
