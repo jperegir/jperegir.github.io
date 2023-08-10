@@ -2,6 +2,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const circlesArray = document.querySelectorAll("span[class^=circle]");
   const skillsSection = document.querySelector("div[class=skills-container]");
   const progressBars = document.querySelectorAll(".skill-item-progress-bar");
+  const accordionSummary = document.getElementById("accordion-summary");
+  const accordionList = document.getElementById("accordion-list");
+
+  accordionSummary.addEventListener("click", (event) => {
+    event.currentTarget.classList.toggle("border-summary");
+    accordionList.classList.toggle("border-list");
+  });
 
   const map = L.map("map").setView(
     [39.28759292141628, -0.41172800972340184],
@@ -111,7 +118,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   /* SMOOTH SCROLL */
   const pageHeaders = document.querySelectorAll(".header-text");
-  console.log("pageHeaders", pageHeaders);
   pageHeaders.forEach((item) => {
     item.addEventListener("click", (e) => {
       e.preventDefault();

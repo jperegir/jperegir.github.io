@@ -414,6 +414,7 @@ body {
   position: relative;
   width: 100%;
   height: 250px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -611,6 +612,52 @@ body {
 }
 
 /* === END SKILLS STYLES === */
+
+.projects-container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 120px;
+}
+
+.projects-container__des p {
+  text-align: left;
+  text-indent: 30px;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+.projects-container__accordion details summary {
+  font-weight: 700;
+  padding-left: 25px;
+  color: rgba(0, 0, 0, 0.75);
+  margin-top: 50px;
+  padding-top: 15px;
+}
+
+.border-summary {
+  border-top: 2px solid orangered;
+  border-left: 2px solid orangered;
+  border-right: 2px solid orangered;
+}
+
+.border-list {
+  border-bottom: 2px solid orangered;
+  border-left: 2px solid orangered;
+  border-right: 2px solid orangered;
+}
+
+.projects-container__list {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-top: 40px;
+}
+
+.projects-container__list li {
+  margin-bottom: 10px;
+  list-style-type: square;
+  padding: 10px;
+}
 
 /* === START EDUCATION STYLES === */
 
@@ -856,7 +903,7 @@ nav.sticky {
     padding: 0;
     background-color: unset;
     position: unset;
-    gap: 1.5em;
+    gap: 0.9em;
     grid-auto-flow: column;
     transform: unset;
     grid-column: -2/-1;
@@ -997,7 +1044,7 @@ nav.sticky {
 
   .stack-container {
     width: 80%;
-    height: 400px;
+    height: 300px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     margin-top: 60px;
