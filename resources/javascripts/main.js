@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const link = document.querySelector(".link");
+  const link = document.querySelector(".btn-wrapper__link");
   const pink = document.querySelector(".color");
   const hoverTL = gsap.timeline();
   hoverTL.pause();
