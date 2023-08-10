@@ -166,4 +166,18 @@ document.addEventListener("DOMContentLoaded", () => {
   link.addEventListener("mouseleave", () => {
     hoverTL.reverse();
   });
+
+  window.onscroll = function (e) {
+    // print "false" if direction is down and "true" if up
+    let scrollDirection = this.oldScroll > this.scrollY;
+    this.oldScroll = this.scrollY;
+    if (scrollDirection === true) {
+      // console.log('sube');
+      hoverTL.reverse();
+    } else if (scrollDirection === false) {
+      // console.log('baja');
+      hoverTL.play();
+    }
+    
+  };
 });
