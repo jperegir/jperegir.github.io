@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currículo Vitae Personal</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/resources/icons/language_black_24dp.svg"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.6.0/cdn/themes/light.css"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/resources/styles/normalize.css" />
+    <link rel="stylesheet" href="/resources/styles/main.css" />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@proyecto26/animatable-component@1.1.10/dist/animatable-component/animatable-component.esm.js"
+    ></script>
+    <!-- Swiper JS -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
+    ></script>
+    <script
+      defer
+      src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"
+    ></script>
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <!-- <script
+      type="module"
+      defer
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.6.0/cdn/shoelace-autoloader.js"
+    ></script> -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+    ></script>
+
+    <script defer src="/resources/javascripts/main.js"></script>
+  </head>
+  <body>
+    <header class="header-container">
+      <nav class="nav container" id="nav">
+        <div id="top-reference" class="nav__logo">
+          <img
+            src="/resources/images/jperegir_logo-black.png"
+            alt="thewebmasterlogo"
+            width="100px"
+          />
+        </div>
+        <ul class="nav__links">
+          <li class="nav__item">
+            <a href="#sobre-mi" class="nav__link">Sobre mí</a>
+          </li>
+          <li class="nav__item">
+            <a href="#educacion" class="nav__link">Educación</a>
+          </li>
+          <li class="nav__item">
+            <a href="#experiencia" class="nav__link">Experiencia</a>
+          </li>
+          <li class="nav__item">
+            <a href="#habilidades" class="nav__link">Habilidades</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contacto" class="nav__link">Contacto</a>
+          </li>
+        </ul>
+        <a href="#nav" class="nav__hamburguer">
+          <img src="resources/icons/menu.svg" class="nav__icon" />
+        </a>
+        <a href="#" class="nav__close">
+          <img src="resources/icons/close.svg" class="nav__icon" />
+        </a>
+      </nav>
+    </header>
+    <main class="cv-container">
+      <div class="header-name">
+        <animatable-component
+          autoplay
+          animation="fadeInLeft"
+          easing="ease-in-out"
+          duration="1200"
+        >
+          <div class="wave-container">
+            <h3 class="wave-title wave-border">JOSEVI PÉREZ GIRONA</h3>
+            <h3 class="wave-title wave">JOSEVI PÉREZ GIRONA</h3>
+          </div>
+        </animatable-component>
+        <div class="header-name__desc">
+          <animatable-component
+            autoplay
+            animation="fadeInDown"
+            easing="ease-in-out"
+            duration="1200"
+          >
+            <p>Programador Web Full Stack</p>
+          </animatable-component>
+        </div>
+        <div class="slider">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card-slider">
+                  <div class="card-slider__image card-slider__image--one"></div>
+                  <div class="card-slider__person-data">
+                    <p></p>
+                    <div class="card-slider__text">
+                      <p><q>Si te dedicas a aquello que te gusta y te apasiona, no es necesario contar con ningún plan maestro sobre cómo van a suceder los acontecimientos.</q> Mark Zuckerberg, &nbsp;Cofundador/CEO de Facebook</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-slider">
+                  <div class="card-slider__image card-slider__image--two"></div>
+                  <div class="card-slider__person-data">
+                    <p>Soft Skills</p>
+                    <div class="card-slider__text">
+                      <p>Humilde, responsable, sociable, comunicativo, proactivo,
+                        con capacidad de liderazgo, ...</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-slider">
+                  <div
+                    class="card-slider__image card-slider__image--three"
+                  ></div>
+                  <div class="card-slider__person-data">
+                    <p>Hard Skills</p>
+                    <div class="card-slider__text">
+                      <p>Desarrollo web, gestión de proyectos, modelado de bases de
+                        datos, diseño gráfico, ...</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+      <animatable-component
+        autoplay
+        animation="fadeInRight"
+        easing="ease-in-out"
+        duration="1200"
+      >
+        <h2 id="sobre-mi" class="header-text">
+          <a class="top" href="#top-reference">#</a>&nbsp;SOBRE MÍ
+        </h2>
+      </animatable-component>
+      <div class="aboutme-container">
+        <p>
+          Programador con más de cinco años dedicados a la programación web y,
+          desde hace más de tres, enfocado a la programación web de aplicaciones
+          empresariales en el sector logístico.
+        </p>
+        <p>
+          Con experiencia en integraciones de servicios web (API RESTful y
+          SOAP), el desarrollo de aplicaciones web responsivas siguiendo el
+          enfoque "mobile first" y la creación de contenido web y e-commerce
+          (Woocommerce) mediante el sistema de gestión WordPress, entre otras
+          cosas.
+        </p>
+        <p>
+          Trabajo diariamente con los lenguajes PHP, javascript y typescrypt,
+          ejecutados sobre servidores Apache, en el primer caso, y sobre el
+          entorno NODE.js y servidores Express.js, en el segundo y último caso.
+        </p>
+        <p>
+          Dispongo de amplia experiencia en el diseño de base de datos
+          relacionales, sobre todo definidas mediante el sistema de gestión
+          Microsoft SQL Server.
+        </p>
+        <p>
+          Desde mis primeras experiencias con la programación web, he intentado
+          siempre trabajar con los lenguajes nativos, evitando la dependencia de
+          frameworks o, en todo caso, hacer uso de aquellos que menos se alejen
+          de los estándares de programación.
+        </p>
+        <p>
+          Estoy muy interesado en el desarrollo de código limpio basado en los
+          principios SOLID aplicados a la arquitectura hexagonal y en los Custom
+          Elements aplicados al desarrollo de aplicaciones web reactivas.
+          Además, estoy muy centrado en la adquisición de nuevos conocimientos
+          CSS para poder desarrollar mejores interfaces gráficas en mis
+          productos.
+        </p>
+      </div>
+      <animatable-component
+        autoplay
+        animation="fadeInRight"
+        easing="ease-in-out"
+        duration="1200"
+      >
+        <h2 id="educacion" class="header-text">
+          <a class="top" href="#top-reference">#</a>&nbsp;EDUCACIÓN
+        </h2>
+      </animatable-component>
+
+      <div class="education-container">
+        <div class="separator-container">
+          <div class="separator"></div>
+          <h3>TITULACIONES</h3>
+          <div class="separator"></div>
+        </div>
+
+        <div class="education-card">
+          <div class="education-card__year">
+            <p>2018</p>
+          </div>
+          <div class="education-card__academic-title">
+            <p>
+              Técnico Superior en Desarrollo de Aplicaciones Multiplataforma
+            </p>
+          </div>
+          <div class="education-card__academy">
+            <p>Florida Universitaria</p>
+          </div>
+        </div>
+
+        <div class="education-card">
+          <div class="education-card__year">
+            <p>2018</p>
+          </div>
+          <div class="education-card__academic-title">
+            <p>Certificado en Oracle DataBase Foundations (1Z0-006)</p>
+          </div>
+          <div class="education-card__academy">
+            <p>Centro SERVEF de Formación CRNFP de Paterna</p>
+            <!-- <p>Proyecto Universidad Empresa, SL (PUE)</p> -->
+          </div>
+        </div>
+
+        <div class="education-card">
+          <div class="education-card__year">
+            <p>2016</p>
+          </div>
+          <div class="education-card__academic-title">
+            <p>
+              Técnico Superior Iluminación, Captación y Tratamiento de la imagen
+            </p>
+          </div>
+          <div class="education-card__academy">
+            <p>Instituto Educación Secundaria La Marxadella</p>
+          </div>
+        </div>
+
+        <div class="education-card">
+          <div class="education-card__year">
+            <p>2003</p>
+          </div>
+          <div class="education-card__academic-title">
+            <p>Certificado de Aptitud Pedagógica (CAP)</p>
+          </div>
+          <div class="education-card__academy">
+            <p>Universidad Politécnica de Valencia</p>
+          </div>
+        </div>
+
+        <div class="education-card">
+          <div class="education-card__year">
+            <p>2003</p>
+          </div>
+          <div class="education-card__academic-title">
+            <p>Ingeniero Técnico Forestal</p>
+          </div>
+          <div class="education-card__academy">
+            <p>Universidad Politécnica de Valencia</p>
+          </div>
+        </div>
+
+        <div class="separator-container separator-container--secondary">
+          <div class="separator"></div>
+          <h3>CURSOS</h3>
+          <div class="separator"></div>
+        </div>
+
+        <div class="education-card">
+          <div class="education-card__year">
+            <p>2021</p>
+          </div>
+          <div class="education-card__academic-title">
+            <p>Fast Master en Dirección de Transformación Digital (90 horas)</p>
+          </div>
+          <div class="education-card__academy">
+            <p>Nunsys</p>
+          </div>
+        </div>
+        <div class="education-card">
+          <div class="education-card__year">
+            <p>2018</p>
+          </div>
+          <div class="education-card__academic-title">
+            <p>
+              Curso de Introducción a las BBDD Relacionales Oracle (80 horas)
+            </p>
+          </div>
+          <div class="education-card__academy">
+            <p>Centro SERVEF de Formación CRNFP de Paterna</p>
+          </div>
+        </div>
+        <div class="education-card">
+          <div class="education-card__year">
+            <p>2018</p>
+          </div>
+          <div class="education-card__academic-title">
+            <p>
+              Curso de Desarrollo de Aplicaciones Web con PHP y MySQL (80 horas)
+            </p>
+          </div>
+          <div class="education-card__academy">
+            <p>Centro SERVEF de Formación CRNFP de Paterna</p>
+          </div>
+        </div>
+      </div>
+
+      <animatable-component
+        autoplay
+        animation="fadeInRight"
+        easing="ease-in-out"
+        duration="1200"
+      >
+        <h2 id="experiencia" class="header-text">
+          <a class="top" href="#top-reference">#</a>&nbsp;EXPERIENCIA
+        </h2>
+      </animatable-component>
+      <div class="experience-container">
+        <div class="experience-line">
+          <div class="line"></div>
+          <span class="circle-1"></span>
+        </div>
+        <div class="experience-year">
+          <p>2020</p>
+        </div>
+        <div class="experience-info">
+          <p>AZA LOGISTICS S.L.U.</p>
+          <p>Programador aplicaciones web senior.</p>
+        </div>
+
+        <div class="experience-line">
+          <div class="line"></div>
+          <span class="circle-2"></span>
+        </div>
+        <div class="experience-year">
+          <p>2019</p>
+        </div>
+        <div class="experience-info">
+          <p>LABORATORIOS ATL ESPAÑA S.L</p>
+          <p>Programador aplicaciones Java y web junior.</p>
+        </div>
+        <div class="experience-line">
+          <div class="line"></div>
+          <span class="circle-3"></span>
+        </div>
+        <div class="experience-year">
+          <p>2018</p>
+        </div>
+        <div class="experience-info">
+          <p>MERCADONA S.A.</p>
+          <p>Técnico Informático SAP ERP.</p>
+        </div>
+
+        <div class="experience-line">
+          <div class="line"></div>
+          <span class="circle-4"></span>
+        </div>
+        <div class="experience-year">
+          <p>2017</p>
+        </div>
+        <div class="experience-info">
+          <p>INDENOVA S.L.</p>
+          <p>Programador aplicaciones Android y Java junior.</p>
+        </div>
+      </div>
+      <animatable-component
+        autoplay
+        animation="fadeInRight"
+        easing="ease-in-out"
+        duration="1200"
+      >
+        <h2 id="habilidades" class="header-text">
+          <a class="top" href="#top-reference">#</a>&nbsp;HABILIDADES
+        </h2>
+      </animatable-component>
+      <div class="skills-container">
+        <p>HTML5</p>
+        <div class="skill-item">
+          <div class="skill-item-progress-bar" data-progress="90">
+            <span>90%</span>
+          </div>
+        </div>
+        <p>CSS3</p>
+        <div class="skill-item">
+          <div class="skill-item-progress-bar" data-progress="70">
+            <span>70%</span>
+          </div>
+        </div>
+        <p>Javascript (Vanilla)</p>
+        <div class="skill-item">
+          <div class="skill-item-progress-bar" data-progress="80">
+            <span>80%</span>
+          </div>
+        </div>
+        <p>Typescript</p>
+        <div class="skill-item">
+          <div class="skill-item-progress-bar" data-progress="70">
+            <span>70%</span>
+          </div>
+        </div>
+        <p>Node JS</p>
+        <div class="skill-item">
+          <div class="skill-item-progress-bar" data-progress="90">
+            <span>90%</span>
+          </div>
+        </div>
+        <p>PHP</p>
+        <div class="skill-item">
+          <div class="skill-item-progress-bar" data-progress="80">
+            <span>80%</span>
+          </div>
+        </div>
+      </div>
+      <div class="stack-container">
+        <div class="stack-card">
+          <div class="stack-card__header">STACK</div>
+          <div class="stack-card__left">
+              <img src="/resources/images/bx-laptop.svg" alt="laptop" />
+              <h3>WAMP</h3>
+          </div>
+          <div class="stack-card__right">
+            <ul>
+              <li>Windows</li>
+              <li>Apache</li>
+              <li>Microsoft SQL Server</li>
+              <li>PHP</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="stack-card">
+          <div class="stack-card__header">STACK</div>
+          <div class="stack-card__left">
+              <img src="/resources/images/bx-laptop.svg" alt="laptop" />
+              <h3>LAMP</h3>
+          </div>
+          <div class="stack-card__right">
+            <ul>
+              <li>Linux</li>
+              <li>Apache</li>
+              <li>Microsoft SQL Server</li>
+              <li>PHP</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="stack-card">
+          <div class="stack-card__header">STACK</div>
+          <div class="stack-card__left">
+              <img src="/resources/images/bx-laptop.svg" alt="laptop" />
+              <h3>MELN</h3>
+          </div>
+          <div class="stack-card__right">
+            <ul>
+              <li>Microsoft SQL Server</li>
+              <li>Express.js</li>
+              <li>Lit</li>
+              <li>Node.js</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <animatable-component
+        autoplay
+        animation="fadeInRight"
+        easing="ease-in-out"
+        duration="1200"
+      >
+        <h2 id="contacto" class="header-text">
+          <a class="top" href="#top-reference">#</a>&nbsp;CONTACTO
+        </h2>
+      </animatable-component>
+      <div class="direction-container">
+        <div class="direction-container__data">
+          <div class="direction-container__data-item link">
+            <i class="bx bx-current-location direction-container__icon"></i>
+            <p class="direction-container__text">
+              Almussafes (Valencia) cp. 46440
+            </p>
+          </div>
+          <div class="direction-container__data-item">
+            <a class="link" href="tel:+34 667 70 13 62">
+              <i class="bx bxs-phone direction-container__icon"></i>
+              <p class="direction-container__text">+34 667 70 13 62</p>
+            </a>
+          </div>
+          <div class="direction-container__data-item">
+            <a class="link" href="mailto:jperegir@gmail.com">
+              <i class="bx bxs-envelope direction-container__icon"></i>
+              <p class="direction-container__text">jperegir@gmail.com</p>
+            </a>
+          </div>
+        </div>
+        <div id="map" class="direction-container__map"></div>
+      </div>
+
+      <!-- <animatable-component
+      autoplay
+      animation="fadeInRight"
+      easing="ease-in-out"
+      duration="1200"
+    >
+      <h2 id="servicios" class="header-text">
+        <a class="top" href="#top-reference">#</a>&nbsp;SERVICIOS
+      </h2>
+    </animatable-component> -->
+      <div class="services-container">
+        <div class="service-card">
+          <div class="service-card__icon">
+            <i class="bx bx-laptop"></i>
+          </div>
+          <div class="service-card__title">
+            <h3 class="service-title">Desarrollo Frontend</h3>
+          </div>
+          <div class="service-card__desc">
+            <p>
+              Desarrollo de sitios web responsivos basados en el diseño
+              <i>mobile first</i>.
+            </p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <i class="bx bxs-server"></i>
+          </div>
+          <div class="service-card__title">
+            <h3 class="service-title">Desarrollo Backend</h3>
+          </div>
+          <div class="service-card__desc">
+            <p>Desarrollo de aplicaciones web corporativas.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <i class="bx bxl-wordpress"></i>
+          </div>
+          <div class="service-card__title">
+            <h3 class="service-title">Desarrollo WordPress</h3>
+          </div>
+          <div class="service-card__desc">
+            <p>
+              Desarrollo personalizado y a medida, implementación en hosting y
+              mantenimiento.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
