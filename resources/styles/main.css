@@ -314,7 +314,8 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 0.7fr 2fr;
   gap: 15px;
-  margin-top: 50px;
+  margin-top: 80px;
+  margin-bottom: 100px;
   border: 2px solid gray;
   padding: 15px;
   border-radius: 15px;
@@ -476,7 +477,9 @@ body {
 
 .skills-container {
   width: 60%;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
 }
 
 .skill-item {
@@ -507,38 +510,44 @@ body {
 }
 
 .stack-container {
-  width: 80vw;
+  width: 100%;
   min-width: 360px;
-  height: 1000px;
-  margin-top: 150px;
+  height: 900px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
   gap: 25px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .stack-card {
-  height: 300px;
-  min-width: 350px;
+  height: 250px;
+  width: 300px;
+  min-width: 300px;
   display: grid;
-  grid-template-columns: 40% 60%;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 20% 80%;
   padding: 15px;
   border-radius: 15px;
   grid-template-areas:
     "header header"
     "left right";
   background-color: rgba(128, 128, 128, 0.25);
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .stack-card__header {
   grid-area: header;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
 }
 
@@ -551,7 +560,7 @@ body {
 }
 
 .stack-card__left img {
-  height: 50%;
+  height: 80px;
 }
 
 .stack-card__left h3 {
@@ -565,6 +574,7 @@ body {
   height: 100%;
   border-left: 2px solid orangered;
   padding-left: 20px;
+  font-size: 1.2rem;
 }
 
 .stack-card__right {
@@ -880,6 +890,8 @@ nav.sticky {
     height: 500px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 150px;
     grid-template-rows: 0.5fr 3fr;
   }
 
@@ -902,9 +914,11 @@ nav.sticky {
   }
 
   .stack-container {
+    width: 80%;
     height: 400px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
+    margin-top: 60px;
   }
 
   .stack-card {
