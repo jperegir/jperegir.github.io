@@ -799,7 +799,7 @@ nav.sticky {
   justify-content: center;
 }
 
-.link {
+.btn-wrapper__link {
   font-size: 1.4rem;
   font-weight: bold;
   color: orangered;
@@ -808,16 +808,16 @@ nav.sticky {
   letter-spacing: 0.15rem;
 }
 
-.link span,
-.link i {
+.btn-wrapper__link span,
+.btn-wrapper__link i {
   position: relative;
 }
 
-.link i {
+.btn-wrapper__link i {
   margin-left: 0.5em;
 }
 
-.link .color {
+.btn-wrapper__link .color {
   width: 2em;
   height: 2em;
   border-radius: 2em;

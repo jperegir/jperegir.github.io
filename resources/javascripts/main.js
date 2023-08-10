@@ -178,6 +178,5 @@ document.addEventListener("DOMContentLoaded", () => {
       // console.log('baja');
       hoverTL.play();
     }
-    
   };
 });
