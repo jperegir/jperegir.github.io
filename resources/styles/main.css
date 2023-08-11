@@ -951,7 +951,7 @@ nav.sticky {
 }
 
 .btn-wrapper__link .color {
-  width: 2em;
+  width: 2.2em;
   height: 2em;
   border-radius: 2em;
   background-color: var(--color);
@@ -959,6 +959,7 @@ nav.sticky {
   top: 50%;
   transform: translatey(-50%);
   left: -0.65em;
+  z-index: -1;
 }
 
 /* === END BUTTON ANIMATED MENU STYLES === */
