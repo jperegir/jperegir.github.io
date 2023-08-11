@@ -63,7 +63,10 @@
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
     ></script>
-
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"
+    ></script>
     <script defer src="/resources/javascripts/main.js"></script>
   </head>
   <body>
@@ -112,30 +115,21 @@
           easing="ease-in-out"
           duration="1200"
         >
-          <div class="wave-container">
-            <h3 class="wave-title wave-border">JOSEVI PÉREZ GIRONA</h3>
-            <h3 class="wave-title wave">JOSEVI PÉREZ GIRONA</h3>
+          <div class="name-container">
+            <h3>JOSEVI PÉREZ GIRONA</h3>
+            <div class="flip">
+              <div><div>TRABAJO</div></div>
+              <div><div>ESFUERZO</div></div>
+              <div><div>PASIÓN</div></div>
+            </div>
+            <h3>PROGRAMADOR WEB</h3>
           </div>
         </animatable-component>
-        <div class="header-name__desc">
-          <animatable-component
-            autoplay
-            animation="fadeInDown"
-            easing="ease-in-out"
-            duration="1200"
-          >
-            <div>
-              <p>Programador Web</p>
-            </div>
-            <div>
-              <p>Full Stack</p>
-            </div>
-          </animatable-component>
-        </div>
 
         <!-- <div class="btn-animated-container"> -->
         <div class="btn-wrapper">
           <a
+            id="btn-cv-download"
             class="btn-wrapper__link"
             href="/resources/files/Josevi.Perez.Girona_CV.pdf"
             target="_blank"
@@ -551,13 +545,16 @@
       <div class="projects-container">
         <div class="projects-container__des">
           <p>
-            Si te interesa conocer cuales son los proyectos más destacados que he llevado a término en los últimos años puedes echar un
-            vistazo aquí:
+            Si te interesa conocer cuales son los proyectos más destacados que
+            he llevado a término en los últimos años puedes echar un vistazo
+            aquí:
           </p>
         </div>
         <div class="projects-container__accordion">
-          <details>
-            <summary id="accordion-summary" class="proj-summary">Proyectos destacados</summary>
+          <details id="projects-details">
+            <summary id="accordion-summary" class="proj-summary">
+              Proyectos destacados
+            </summary>
             <ul id="accordion-list" class="projects-container__list">
               <li>Aplicación web de registro de visitas a almacenes.</li>
               <li>
@@ -623,16 +620,20 @@
                 PNG) a formato PDF.
               </li>
             </ul>
+            <div id="close-projectsList" class="close-projectsList"></div>
           </details>
         </div>
         <div class="libs-container__des">
           <p>
-          En ellos he trabajado, entre otras, con las siguientes librerías de terceros:
+            En ellos he trabajado, entre otras, con las siguientes librerías de
+            terceros:
           </p>
         </div>
         <div class="libs-container__accordion">
-          <details>
-            <summary id="libs-summary" class="libs-summary">Librerías utilizadas</summary>
+          <details id="libs-details">
+            <summary id="libs-summary" class="libs-summary">
+              Librerías utilizadas
+            </summary>
             <div id="libs-list" class="libs-list">
               <div class="card-lib">
                 <div class="card-lib__icon card-lib__icon--one"></div>
@@ -657,11 +658,12 @@
               <div class="card-lib">
                 <div class="card-lib__icon card-lib__icon--six"></div>
                 <div class="card-lib__name">Tesseract.js</div>
+                <!-- </div> -->
               </div>
             </div>
-            </div>
-            </details>
-          </div>
+            <div id="close-libsList" class="close-libsList"></div>
+          </details>
+        </div>
       </div>
 
       <animatable-component

@@ -4,6 +4,48 @@ document.addEventListener("DOMContentLoaded", () => {
   const progressBars = document.querySelectorAll(".skill-item-progress-bar");
   const accordionSummary = document.getElementById("accordion-summary");
   const accordionList = document.getElementById("accordion-list");
+  const btnCloseProjectsAccord = document.getElementById('close-projectsList');
+  const btnCloseLibsAccord = document.getElementById('close-libsList');
+
+  const count = 200;
+  const defaults = {
+    origin: { y: 0.7 },
+  };
+
+  function fire(particleRatio, opts) {
+    confetti(
+      Object.assign({}, defaults, opts, {
+        particleCount: Math.floor(count * particleRatio),
+      })
+    );
+  }
+
+  function getRealisticConfetti() {
+    fire(0.25, {
+      spread: 26,
+      startVelocity: 55,
+    });
+    fire(0.2, {
+      spread: 60,
+    });
+    fire(0.35, {
+      spread: 100,
+      decay: 0.91,
+      scalar: 0.8,
+    });
+    fire(0.1, {
+      spread: 120,
+      startVelocity: 25,
+      decay: 0.92,
+      scalar: 1.2,
+    });
+    fire(0.1, {
+      spread: 120,
+      startVelocity: 45,
+    });
+  }
+
+  getRealisticConfetti();
 
   accordionSummary.addEventListener("click", (event) => {
     event.currentTarget.classList.toggle("border-summary");
@@ -178,11 +220,37 @@ document.addEventListener("DOMContentLoaded", () => {
     let scrollDirection = this.oldScroll > this.scrollY;
     this.oldScroll = this.scrollY;
     if (scrollDirection === true) {
-      // console.log('sube');
       hoverTL.reverse();
     } else if (scrollDirection === false) {
-      // console.log('baja');
       hoverTL.play();
     }
   };
+
+  const scrollTop = function () {
+    const scrollBtn = document.createElement("a");
+    scrollBtn.innerHTML = "";
+    scrollBtn.setAttribute("href", "#top");
+    scrollBtn.setAttribute("class", "scroll-btn");
+    document.body.appendChild(scrollBtn);
+    // hide/show button based on scroll distance
+    const scrollBtnDisplay = function () {
+      window.scrollY > window.innerHeight
+        ? scrollBtn.classList.add("show")
+        : scrollBtn.classList.remove("show");
+    };
+    window.addEventListener("scroll", scrollBtnDisplay);
+  };
+  scrollTop();
+
+  btnCloseProjectsAccord.addEventListener('click', function () {
+    const details = document.getElementById('projects-details');
+    details.removeAttribute("open");
+    details.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+  });
+  
+  btnCloseLibsAccord.addEventListener('click', function () {
+    const details = document.getElementById('libs-details');
+    details.removeAttribute("open");
+    details.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+  });
 });
