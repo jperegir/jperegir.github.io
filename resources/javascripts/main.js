@@ -4,8 +4,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const progressBars = document.querySelectorAll(".skill-item-progress-bar");
   const accordionSummary = document.getElementById("accordion-summary");
   const accordionList = document.getElementById("accordion-list");
-  const btnCloseProjectsAccord = document.getElementById('close-projectsList');
-  const btnCloseLibsAccord = document.getElementById('close-libsList');
+  const btnCloseProjectsAccord = document.getElementById("close-projectsList");
+  const btnCloseLibsAccord = document.getElementById("close-libsList");
+  const btnWrapper = document.getElementById("btn-wrapper");
+  const btnDownload = document.getElementById("btn-download");
+  const iconArrowUp = `bxs-chevron-up`;
+  const iconArrowDown = `bxs-chevron-down`;
+
+  btnWrapper.addEventListener("click", (event) => {
+    btnDownload.classList.toggle("btn-hide");
+    const domIcon = ask.nextElementSibling;
+    if (domIcon.classList.contains(iconArrowUp)) {
+      getRealisticConfetti();
+      domIcon.classList.remove(iconArrowUp);
+      domIcon.classList.add(iconArrowDown);
+    } else if (domIcon.classList.contains(iconArrowDown)) {
+      domIcon.classList.add(iconArrowUp);
+      domIcon.classList.remove(iconArrowDown);
+    }
+  });
 
   const count = 200;
   const defaults = {
@@ -44,8 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
       startVelocity: 45,
     });
   }
-
-  getRealisticConfetti();
 
   accordionSummary.addEventListener("click", (event) => {
     event.currentTarget.classList.toggle("border-summary");
@@ -242,15 +257,23 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   scrollTop();
 
-  btnCloseProjectsAccord.addEventListener('click', function () {
-    const details = document.getElementById('projects-details');
+  btnCloseProjectsAccord.addEventListener("click", function () {
+    const details = document.getElementById("projects-details");
     details.removeAttribute("open");
-    details.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+    details.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "nearest",
+    });
   });
-  
-  btnCloseLibsAccord.addEventListener('click', function () {
-    const details = document.getElementById('libs-details');
+
+  btnCloseLibsAccord.addEventListener("click", function () {
+    const details = document.getElementById("libs-details");
     details.removeAttribute("open");
-    details.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+    details.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "nearest",
+    });
   });
 });
