@@ -202,7 +202,7 @@ body {
   align-items: start;
 }
 
-.card-slider__person-data > p {
+.card-slider__person-data>p {
   margin-top: 0;
   font-size: 2rem;
   font-weight: 700;
@@ -261,7 +261,7 @@ body {
   font-size: 1.8rem;
 }
 
-.flip > div > div {
+.flip>div>div {
   color: #fff;
   padding: 4px 12px;
   height: 45px;
@@ -278,6 +278,7 @@ body {
 }
 
 @keyframes show {
+
   /* 0% {margin-top:-270px;}
   5% {margin-top:-170px;}
   33% {margin-top:-170px;}
@@ -289,28 +290,36 @@ body {
   0% {
     margin-top: -270px;
   }
+
   5% {
     margin-top: -160px;
   }
+
   33% {
     margin-top: -160px;
   }
+
   38% {
     margin-top: -75px;
   }
+
   66% {
     margin-top: -75px;
   }
+
   71% {
     margin-top: 0px;
   }
+
   99.99% {
     margin-top: 0px;
   }
+
   100% {
     margin-top: -270px;
   }
 }
+
 /* === END HEADER NAME STYLES === */
 
 /* Ocultamos controles del mapa leaflet*/
@@ -519,7 +528,7 @@ body {
   color: white;
 }
 
-.skills-container > p {
+.skills-container>p {
   margin-top: 20px;
   margin-bottom: 10px;
 }
@@ -673,12 +682,13 @@ body {
   padding: 10px;
 }
 
-.libs-list {
+.card-libs-container {
   width: 90%;
   height: 600px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
+  margin-bottom: 50px;
   background-color: white;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -687,6 +697,124 @@ body {
   align-items: center;
   justify-items: center;
   gap: 20px;
+}
+
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box-card {
+  background-color: transparent;
+  width: 120px;
+  height: 120px;
+  /* border: 1px solid #f1f1f1; */
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box-card:hover .flip-box-card__inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-card__front,
+.flip-box-card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-card__front {
+  background-color: azure;
+  color: black;
+  /* background-image: url(/resources/images/gsap.png); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Style the back side */
+.flip-box-card__back {
+  background-color: lavenderblush;
+  color: white;
+  transform: rotateY(180deg);
+  /* background-image: url(/resources/images/gsap.png); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.flip-box-card__back h3 {
+  font-size: 1rem;
+}
+
+.flip-box-card__front--img1 {
+  background-image: url(/resources/images/greenshok.png);
+}
+
+.flip-box-card__back--img1 {
+  /* background-image: url(/resources/images/greenshok.png); */
+  color: #141414;
+}
+
+.flip-box-card__front--img2 {
+  background-image: url(/resources/images/chartjs.png);
+}
+
+.flip-box-card__back--img2 {
+  /* background-image: url(/resources/images/chartjs.png); */
+  color: #141414;
+}
+
+.flip-box-card__front--img3 {
+  background-image: url(/resources/images/datatables.png);
+}
+
+.flip-box-card__back--img3 {
+  /* background-image: url(/resources/images/datatables.png); */
+  color: #141414;
+}
+
+.flip-box-card__front--img4 {
+  background-image: url(/resources/images/fullcalendar.png);
+}
+
+.flip-box-card__back--img4 {
+  /* background-image: url(/resources/images/fullcalendar.png); */
+  color: #141414;
+}
+
+.flip-box-card__front--img5 {
+  background-image: url(/resources/images/sheetjs.png);
+}
+
+.flip-box-card__back--img5 {
+  /* background-image: url(/resources/images/sheetjs.png); */
+  color: #141414;
+}
+
+.flip-box-card__front--img6 {
+  background-image: url(/resources/images/tesseractjs.png);
+}
+
+.flip-box-card__back--img6 {
+  /* background-image: url(/resources/images/tesseractjs.png); */
+  color: #141414;
 }
 
 .close-projectsList,
@@ -699,48 +827,6 @@ body {
   background-color: rgb(128, 128, 128, 0.5);
   border-radius: 5px;
   cursor: pointer;
-}
-
-.card-lib {
-  width: 120px;
-  height: 120px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffcc66;
-  border-radius: 5px;
-}
-
-.card-lib__icon {
-  width: 80%;
-  height: 80%;
-  padding: 10px;
-}
-
-.card-lib__icon--one {
-  content: url(/resources/images/greenshok.png);
-}
-.card-lib__icon--two {
-  content: url(/resources/images/chartjs.png);
-}
-.card-lib__icon--three {
-  content: url(/resources/images/datatables.png);
-}
-.card-lib__icon--four {
-  content: url(/resources/images/fullcalendar.png);
-}
-.card-lib__icon--five {
-  content: url(/resources/images/sheetjs.png);
-}
-.card-lib__icon--six {
-  content: url(/resources/images/tesseractjs.png);
-}
-
-.card-lib__name {
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-align: center;
 }
 
 /* === END ACCORDION & LIBRARIES PROJECTS STYLES === */
@@ -778,12 +864,10 @@ body {
   border: 0;
   width: 80vw;
   height: 1px;
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.75),
-    rgba(0, 0, 0, 0)
-  );
+  background-image: linear-gradient(to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0));
 }
 
 .education-card {
@@ -1015,6 +1099,7 @@ nav.sticky {
   border-radius: 50%;
   transition: opacity 0.5s, transform 0.5s;
 }
+
 .scroll-btn.show {
   opacity: 1;
   transition: opacity 1s, transform 1s;
@@ -1140,6 +1225,18 @@ nav.sticky {
     font-size: 1.5rem;
   }
 
+  .card-libs-container {
+    width: 80%;
+    height: 400px;
+    margin-top: 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .flip-box-card {
+    width: 150px;
+    height: 150px;
+  }
+
   .direction-container {
     width: 80%;
     min-width: 800px;
@@ -1147,6 +1244,10 @@ nav.sticky {
     margin-top: 100px;
     margin-bottom: 150px;
     grid-template-rows: 0.5fr 3fr;
+  }
+
+  .flip-box-card__back h3 {
+    font-size: 1.2rem;
   }
 
   .direction-container__data {
@@ -1177,13 +1278,6 @@ nav.sticky {
 
   .stack-card {
     max-width: 550px;
-  }
-
-  .libs-list {
-    width: 60%;
-    height: 350px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
   }
 
   .services-container {
@@ -1219,6 +1313,7 @@ nav.sticky {
   from {
     width: 0%;
   }
+
   to {
     width: 100%;
   }
