@@ -229,95 +229,11 @@ body {
 }
 
 /* === START HEADER NAME STYLES === */
+
 .name-container {
-  text-transform: uppercase;
-  font-size: 36px;
-  font-weight: bold;
-  position: relative;
-  width: 100%;
-  bottom: 45%;
-  display: block;
-}
-
-.name-container h3 {
-  margin-top: 0;
-  font-size: 1.5rem;
-  color: rgba(0, 0, 0, 0.8);
-  text-align: center;
-  margin-bottom: 15px;
-  margin-top: 15px;
-}
-
-.name-container h3:first-child {
-  color: rgba(0, 0, 0, 0.9);
-  font-size: 1.8rem;
-  margin-top: 0;
-}
-
-.flip {
-  height: 50px;
-  overflow: hidden;
-  text-align: center;
-  font-size: 1.8rem;
-}
-
-.flip>div>div {
-  color: #fff;
-  padding: 4px 12px;
-  height: 45px;
-  margin-bottom: 45px;
-  display: inline-block;
-}
-
-.flip div:first-child {
-  animation: show 10s linear infinite;
-}
-
-.flip div div {
-  background: rgba(255, 69, 0, 0.8);
-}
-
-@keyframes show {
-
-  /* 0% {margin-top:-270px;}
-  5% {margin-top:-170px;}
-  33% {margin-top:-170px;}
-  38% {margin-top:-85px;}
-  66% {margin-top:-85px;}
-  71% {margin-top:0px;}
-  99.99% {margin-top:0px;}
-  100% {margin-top:-270px;} */
-  0% {
-    margin-top: -270px;
-  }
-
-  5% {
-    margin-top: -160px;
-  }
-
-  33% {
-    margin-top: -160px;
-  }
-
-  38% {
-    margin-top: -75px;
-  }
-
-  66% {
-    margin-top: -75px;
-  }
-
-  71% {
-    margin-top: 0px;
-  }
-
-  99.99% {
-    margin-top: 0px;
-  }
-
-  100% {
-    margin-top: -270px;
-  }
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* === END HEADER NAME STYLES === */
@@ -1108,12 +1024,8 @@ nav.sticky {
 /* === END SCROLL TOP BUTTON STYLES === */
 
 @media (min-width: 768px) {
-  .name-container h3 {
-    font-size: 2.5rem;
-  }
-
-  .name-container h3:first-child {
-    font-size: 3rem;
+  .name-container {
+    width: 60%;
   }
 
   .nav {
