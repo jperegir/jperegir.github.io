@@ -763,6 +763,22 @@ body {
   color: #141414;
 }
 
+.flip-box-card__front--img7 {
+  background-image: url(/resources/images/bootstrap.png);
+}
+
+.flip-box-card__back--img7 {
+  color: #141414;
+}
+
+.flip-box-card__front--img8 {
+  background-image: url(/resources/images/swal.png);
+}
+
+.flip-box-card__back--img8 {
+  color: #141414;
+}
+
 .close-projectsList,
 .close-libsList {
   background-image: url(/resources/icons/chevron-up.svg);
@@ -1186,7 +1202,7 @@ nav.sticky {
 
   .card-libs-container {
     width: 80%;
-    height: 400px;
+    height: 550px;
     margin-top: 100px;
     grid-template-columns: 1fr 1fr 1fr;
   }
