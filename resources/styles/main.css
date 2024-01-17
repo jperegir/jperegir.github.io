@@ -779,6 +779,22 @@ body {
   color: #141414;
 }
 
+.flip-box-card__front--img9 {
+  background-image: url(/resources/images/vitest.png);
+}
+
+.flip-box-card__back--img9 {
+  color: #141414;
+}
+
+.flip-box-card__front--img10 {
+  background-image: url(/resources/images/docker.png);
+}
+
+.flip-box-card__back--img10 {
+  color: #141414;
+}
+
 .close-projectsList,
 .close-libsList {
   background-image: url(/resources/icons/chevron-up.svg);
@@ -1202,7 +1218,7 @@ nav.sticky {
 
   .card-libs-container {
     width: 80%;
-    height: 550px;
+    height: 750px;
     margin-top: 100px;
     grid-template-columns: 1fr 1fr 1fr;
   }
